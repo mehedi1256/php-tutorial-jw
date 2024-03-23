@@ -10,12 +10,12 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/dynamic-web-application"
-                           class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                           class="<?php echo urlIs("/dynamic-web-application") ? "bg-gray-900 text-white" : "text-gray-300"; ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Home</a>
                         <a href="/dynamic-web-application/about.php"
-                           class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                           class="<?php echo urlIs("/dynamic-web-application/about.php") ? "bg-gray-900 text-white" : "text-gray-300"; ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
                         <a href="/dynamic-web-application/contact.php"
-                           class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                           class="<?php echo urlIs("/dynamic-web-application/contact.php") ? "bg-gray-900 text-white" : "text-gray-300"; ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
                     </div>
                 </div>
             </div>
