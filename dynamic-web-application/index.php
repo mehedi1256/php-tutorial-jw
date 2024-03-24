@@ -1,18 +1,16 @@
 <?php
 require("functions.php");
+require("Database.php");
 //require("router.php");
 
 //connect to our mySQL database using PDO
-$dsn = "mysql:host=localhost;port=3306;dbname=php_tutorial_jw;user=root;password=;charset=utf8mb4";
 
-$pdo = new PDO($dsn);
 
-$statement = $pdo->prepare("select * from posts");
-$statement->execute();
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-foreach($posts as $post) {
-//    echo "<li>" . $post['title'] . "</li>";
+$db = new Database();
+$posts = $db->query("select * from posts")->fetchAll(PDO::FETCH_ASSOC);
+//dd($posts);
+foreach($posts as  $post) {
+//    echo "<li>" . $post . "</li>";
     echo "<li>{$post['title']}</li>";
 }
 
