@@ -1,5 +1,7 @@
 <?php
-$uri = parse_url($_SERVER["REQUEST_URI"])["path"];
+
+$routes = require('routes.php');
+
 //dd(parse_url($uri));
 //if ($uri === "/dynamic-web-application")
 //{
@@ -16,13 +18,7 @@ $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 
 
 
-$routes = [
-    "/dynamic-web-application" => "controllers/index.php",
-    "/dynamic-web-application/about" => "controllers/about.php",
-    "/dynamic-web-application/notes" => "controllers/notes.php",
-    "/dynamic-web-application/note" => "controllers/note.php",
-    "/dynamic-web-application/contact" => "controllers/contact.php",
-];
+
 
 function routeToController($uri, $routes) {
     if(array_key_exists($uri, $routes)) {
@@ -37,5 +33,5 @@ function abort($code = 404) {
     require("views/{$code}.php");
     die();
 }
-
+$uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 routeToController($uri, $routes);
