@@ -9,6 +9,11 @@
             <a href="/dynamic-web-application/notes" class="text-blue-500 underline">Go Back...</a>
         </p>
         <p><?= htmlspecialchars($note['body']) ?></p>
+
+        <form class="mt-6" method="POST">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>" />
+            <button class="text-sm text-red-500">Delete</button>
+        </form>
     </div>
 </main>
 
