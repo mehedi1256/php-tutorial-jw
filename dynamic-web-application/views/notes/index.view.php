@@ -16,7 +16,7 @@
         </ul>
 
         <p class="mt-6">
-            <a href="/dynamic-web-application/notes/create" class="text-blue-500 hover:underline">Create Note</a>
+            <a href="/dynamic-web-application/note/create" class="text-blue-500 hover:underline">Create Note</a>
         </p>
     </div>
 </main>
