@@ -10,3 +10,5 @@ $router->patch('/dynamic-web-application/note', 'controllers/notes/update.php');
 $router->get('/dynamic-web-application/note/create', 'controllers/notes/create.php');
 $router->post('/dynamic-web-application/note/create', 'controllers/notes/store.php');
 $router->get('/dynamic-web-application/contact', 'controllers/contact.php');
+
+$router->get('/dynamic-web-application/register', 'controllers/registration/create.php');
