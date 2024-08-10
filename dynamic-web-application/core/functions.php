@@ -24,8 +24,7 @@ function abort($code = 404)
 
 function authorize($condition, $status = Response::FORBIDDEN)
 {
-    if(! $condition)
-    {
+    if (! $condition) {
         abort($status);
     }
 }
@@ -39,4 +38,10 @@ function view($path, $attributes = [])
 {
     extract($attributes);
     require base_path('views/' . $path);
+}
+
+function redirect($path)
+{
+    header("Location: /dynamic-web-application{$path}");
+    exit();
 }
