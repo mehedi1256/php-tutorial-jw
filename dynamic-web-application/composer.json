@@ -1,0 +1,16 @@
+{
+    "name": "mehed/dynamic-web-application",
+    "authors": [
+        {
+            "name": "Mehedi Hassan Shovo",
+            "email": "mehedi181@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Http\\" : "Http/",
+            "core\\" : "core/"
+        }
+    }
+}
