@@ -45,3 +45,8 @@ function redirect($path)
     header("Location: /dynamic-web-application{$path}");
     exit();
 }
+
+function old($key, $default = '')
+{
+    return core\Session::get('old')[$key] ?? $default;
+}
